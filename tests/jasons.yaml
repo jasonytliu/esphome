@@ -1,0 +1,40 @@
+esphome:
+  name: muhesp
+  friendly_name: esphome
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "jodLMEZuXcImqGbdgmK7nOJjUavKW4XX9bNHLVNm/F4="
+
+ota:
+
+wifi:
+  ssid: "AMBROSIA 2"
+  password: "yes0MG!2018"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esphome-Web-5F4Ed4"
+    password: "aHGdfRpa0S6J"
+
+captive_portal:
+
+switch:
+  - platform: gpio
+    pin: GPIO2
+    name: "Test LED"
+    id: led1
+#output:
+#  - platform: gpio
+#    #for led blinking
+#    pin: GPIO2
+#    id: led
